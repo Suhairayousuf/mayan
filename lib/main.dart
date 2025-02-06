@@ -1,9 +1,25 @@
 import 'package:flutter/material.dart';
-
+import 'package:firebase_core/firebase_core.dart';
 import 'features/Home/screen/splash_screen.dart';
+import 'firebase_options.dart';
 
-void main() {
+Future<void> main() async {
+
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
+}
+Future<void> initializeFirebase() async {
+  try {
+    // Check if Firebase is already initialized
+    if (Firebase.apps.isEmpty) {
+      await Firebase.initializeApp();
+    }
+  } catch (e) {
+    print('Error initializing Firebase: $e');
+  }
 }
 
 class MyApp extends StatelessWidget {
