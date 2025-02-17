@@ -11,6 +11,7 @@ class Constants{
   static const linkedinIcon ='assets/images/linkedin.png';
   static const locationIcon ='assets/images/location.png';
   static const wpIcon ='assets/images/wp.png';
+  static const podcast ='assets/images/podcast.svg';
 
 
 }

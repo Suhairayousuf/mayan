@@ -128,7 +128,7 @@ class _EventDetailsPageState extends State<EventDetailsPage> {
            padding: const EdgeInsets.only(left: 10.0,right: 10),
            child: Flexible(
              child: SingleChildScrollView(
-               physics: BouncingScrollPhysics(),
+               physics: const BouncingScrollPhysics(),
                child: Column(
                  children: [
                    Card(
@@ -161,7 +161,7 @@ class _EventDetailsPageState extends State<EventDetailsPage> {
                        ),
                      ),
                    ),
-                   SizedBox(height: 24),
+                   const SizedBox(height: 24),
 
                    // Images Section
                    // _buildSectionHeader('Images', context),
@@ -179,10 +179,10 @@ class _EventDetailsPageState extends State<EventDetailsPage> {
 
                    // Recordings Section
                    // _buildSectionHeader('Recordings', context),
-                   SizedBox(height: 8),
+                   const SizedBox(height: 8),
                    _buildRecordingRow(),
 
-                   SizedBox(height: 24),
+                   const SizedBox(height: 24),
 
                    // Delete and Edit Buttons
                    Row(
@@ -193,7 +193,7 @@ class _EventDetailsPageState extends State<EventDetailsPage> {
                            // Delete action
                          },
                          icon: Icon(Icons.delete, color: Colors.red),
-                         label: Text(
+                         label: const Text(
                            'Delete',
                            style: TextStyle(
                              fontFamily: 'Poppins',
@@ -215,7 +215,7 @@ class _EventDetailsPageState extends State<EventDetailsPage> {
                                horizontal: 20, vertical: 12),
                          ),
                          icon: Icon(Icons.edit, color: Colors.white),
-                         label: Text(
+                         label: const Text(
                            'Edit',
                            style: TextStyle(
                              fontFamily: 'Poppins',
